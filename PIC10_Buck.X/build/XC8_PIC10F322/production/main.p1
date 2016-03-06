@@ -7,6 +7,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S19 . . ]
 "414
 [v _PIR1bits `VS19 ~T0 @X0 0 e@12 ]
+"1240
+[v _ADRES `Vuc ~T0 @X0 0 e@30 ]
+"748
+[v _PWM1DCH `Vuc ~T0 @X0 0 e@21 ]
 "1252
 [s S64 :1 `uc 1 :1 `uc 1 :3 `uc 1 :3 `uc 1 ]
 [n S64 . ADON GO_nDONE CHS ADCS ]
@@ -18,10 +22,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S63 . . . ]
 "1268
 [v _ADCONbits `VS63 ~T0 @X0 0 e@31 ]
-"1240
-[v _ADRES `Vuc ~T0 @X0 0 e@30 ]
-"748
-[v _PWM1DCH `Vuc ~T0 @X0 0 e@21 ]
 [p mainexit ]
 "194
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -1455,175 +1455,165 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 [; ;main.c: 21: volatile uint8_t tick = 0;
-"23
+"24
 [v _delay `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 23: void delay(uint8_t d){
+[; ;main.c: 24: void delay(uint8_t d){
 [e :U _delay ]
 [v _d `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 24: tick = 0;
-"24
-[e = _tick -> -> 0 `i `uc ]
-[; ;main.c: 25: while(tick<d);
+[; ;main.c: 25: tick = 0;
 "25
+[e = _tick -> -> 0 `i `uc ]
+[; ;main.c: 26: while(tick<d);
+"26
 [e $U 145  ]
 [e :U 146 ]
 [e :U 145 ]
 [e $ < -> _tick `i -> _d `i 146  ]
 [e :U 147 ]
-[; ;main.c: 26: }
-"26
+[; ;main.c: 27: }
+"27
 [e :UE 144 ]
 }
 [v F1478 `(v ~T0 @X0 1 tf ]
-"28
+"30
 [v _isr `IF1478 ~T0 @X0 1 e ]
 {
-[; ;main.c: 28: void interrupt isr(void){
+[; ;main.c: 30: void interrupt isr(void){
 [e :U _isr ]
 [f ]
-[; ;main.c: 29: if(PIR1bits.TMR2IF){
-"29
+[; ;main.c: 32: if(PIR1bits.TMR2IF){
+"32
 [e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 149  ]
 {
-[; ;main.c: 30: PIR1bits.TMR2IF = 0;
-"30
+[; ;main.c: 33: PIR1bits.TMR2IF = 0;
+"33
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 32: ADCONbits.GO_nDONE = 1;
-"32
-[e = . . _ADCONbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 34: aConv = ADRES;
-"34
+[; ;main.c: 36: aConv = ADRES;
+"36
 [e = _aConv _ADRES ]
-[; ;main.c: 35: if(aConv<((uint8_t)168) && dutyCycle < 64) dutyCycle++;
-"35
+[; ;main.c: 43: if(aConv<((uint8_t)168) && dutyCycle < 64) dutyCycle++;
+"43
 [e $ ! && < -> _aConv `i -> -> -> 168 `i `uc `i < -> _dutyCycle `i -> 64 `i 150  ]
 [e ++ _dutyCycle -> -> 1 `i `uc ]
 [e $U 151  ]
-"36
+"44
 [e :U 150 ]
-[; ;main.c: 36: else if(dutyCycle>0) dutyCycle--;
+[; ;main.c: 44: else if(dutyCycle>0) dutyCycle--;
 [e $ ! > -> _dutyCycle `i -> 0 `i 152  ]
 [e -- _dutyCycle -> -> 1 `i `uc ]
 [e :U 152 ]
-"38
+"47
 [e :U 151 ]
-[; ;main.c: 38: PWM1DCH = dutyCycle;
+[; ;main.c: 47: PWM1DCH = dutyCycle;
 [e = _PWM1DCH _dutyCycle ]
-[; ;main.c: 39: tick++;
-"39
+[; ;main.c: 50: tick++;
+"50
 [e ++ _tick -> -> 1 `i `uc ]
-[; ;main.c: 42: ADCONbits.GO_nDONE = 1;
-"42
+[; ;main.c: 53: ADCONbits.GO_nDONE = 1;
+"53
 [e = . . _ADCONbits 0 1 -> -> 1 `i `uc ]
-"43
+"54
 }
 [e :U 149 ]
-[; ;main.c: 43: }
-[; ;main.c: 44: }
-"44
+[; ;main.c: 54: }
+[; ;main.c: 55: }
+"55
 [e :UE 148 ]
 }
-"46
+"57
 [v _main `(v ~T0 @X0 1 ef ]
-"47
+"58
 {
-[; ;main.c: 46: void main(void)
-[; ;main.c: 47: {
+[; ;main.c: 57: void main(void)
+[; ;main.c: 58: {
 [e :U _main ]
 [f ]
-"48
-[v _pv `uc ~T0 @X0 1 a ]
-[; ;main.c: 48: uint8_t pv = 0;
-[e = _pv -> -> 0 `i `uc ]
-[; ;main.c: 50: TRISAbits.TRISA2 = 1;
-"50
-[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 51: ADCON = 0xA9;
-"51
-[e = _ADCON -> -> 169 `i `uc ]
-[; ;main.c: 54: PIE1bits.TMR2IE = 1;
-"54
-[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 55: INTCONbits.PEIE = 1;
-"55
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;main.c: 56: INTCONbits.GIE = 1;
-"56
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 59: OSCCONbits.IRCF = 0x7;
-"59
-[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
-[; ;main.c: 60: TRISAbits.TRISA0 = 1;
+[; ;main.c: 60: TRISAbits.TRISA2 = 1;
 "60
-[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 61: PWM1CON = 0;
+[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 61: ADCON = 0xA9;
 "61
-[e = _PWM1CON -> -> 0 `i `uc ]
-[; ;main.c: 62: PR2 = 64;
-"62
-[e = _PR2 -> -> 64 `i `uc ]
-[; ;main.c: 63: PWM1DCH = 0;
-"63
-[e = _PWM1DCH -> -> 0 `i `uc ]
-[; ;main.c: 64: PWM1DCL = 0;
+[e = _ADCON -> -> 169 `i `uc ]
+[; ;main.c: 64: PIE1bits.TMR2IE = 1;
 "64
-[e = _PWM1DCL -> -> 0 `i `uc ]
-[; ;main.c: 65: PIR1bits.TMR2IF = 0;
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 65: INTCONbits.PEIE = 1;
 "65
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 66: T2CON = 0x04;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;main.c: 66: INTCONbits.GIE = 1;
 "66
-[e = _T2CON -> -> 4 `i `uc ]
-[; ;main.c: 67: PWM1CON = 0xF0;
-"67
-[e = _PWM1CON -> -> 240 `i `uc ]
-[; ;main.c: 69: while(!PIR1bits.TMR2IF);
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 69: OSCCONbits.IRCF = 0x7;
 "69
+[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
+[; ;main.c: 70: TRISAbits.TRISA0 = 1;
+"70
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 71: PWM1CON = 0;
+"71
+[e = _PWM1CON -> -> 0 `i `uc ]
+[; ;main.c: 72: PR2 = 64;
+"72
+[e = _PR2 -> -> 64 `i `uc ]
+[; ;main.c: 73: PWM1DCH = 0;
+"73
+[e = _PWM1DCH -> -> 0 `i `uc ]
+[; ;main.c: 74: PWM1DCL = 0;
+"74
+[e = _PWM1DCL -> -> 0 `i `uc ]
+[; ;main.c: 75: PIR1bits.TMR2IF = 0;
+"75
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 76: T2CON = 0x04;
+"76
+[e = _T2CON -> -> 4 `i `uc ]
+[; ;main.c: 77: PWM1CON = 0xF0;
+"77
+[e = _PWM1CON -> -> 240 `i `uc ]
+[; ;main.c: 80: while(!PIR1bits.TMR2IF);
+"80
 [e $U 154  ]
 [e :U 155 ]
 [e :U 154 ]
 [e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 155  ]
 [e :U 156 ]
-[; ;main.c: 70: TRISAbits.TRISA0 = 0;
-"70
-[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 71: PWM1DCH = 10;
-"71
-[e = _PWM1DCH -> -> 10 `i `uc ]
-[; ;main.c: 73: TRISAbits.TRISA1 = 0;
-"73
-[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 75: while(1)
-"75
-[e :U 158 ]
-[; ;main.c: 76: {
-"76
-{
-[; ;main.c: 77: PORTAbits.RA1 = 0;
-"77
-[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 78: delay(100);
-"78
-[e ( _delay (1 -> -> 100 `i `uc ]
-[; ;main.c: 79: PORTAbits.RA1 = 1;
-"79
-[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 80: delay(100);
-"80
-[e ( _delay (1 -> -> 100 `i `uc ]
-[; ;main.c: 81: delay(200);
+[; ;main.c: 81: TRISAbits.TRISA0 = 0;
 "81
+[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 84: TRISAbits.TRISA1 = 0;
+"84
+[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 86: while(1)
+"86
+[e :U 158 ]
+[; ;main.c: 87: {
+"87
+{
+[; ;main.c: 89: PORTAbits.RA1 = 0;
+"89
+[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 90: delay(100);
+"90
+[e ( _delay (1 -> -> 100 `i `uc ]
+[; ;main.c: 93: PORTAbits.RA1 = 1;
+"93
+[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 94: delay(100);
+"94
+[e ( _delay (1 -> -> 100 `i `uc ]
+[; ;main.c: 95: delay(200);
+"95
 [e ( _delay (1 -> -> 200 `i `uc ]
-"82
+"96
 }
 [e :U 157 ]
-"75
+"86
 [e $U 158  ]
 [e :U 159 ]
-[; ;main.c: 82: }
-[; ;main.c: 83: }
-"83
+[; ;main.c: 96: }
+[; ;main.c: 97: }
+"97
 [e :UE 153 ]
 }

@@ -11,39 +11,39 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Haz\AppData\Local\Temp\s8to.obj
+$C:\Users\Haz\AppData\Local\Temp\s9bk.obj
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 E E 1 2
 config CONFIG 0 2007 2007 1 2
 $dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 cinit CODE 0 F F 5 2
-text1 CODE 0 63 63 7 2
-text2 CODE 0 14 14 2C 2
-maintext CODE 0 40 40 23 2
-cstackBANK0 BANK0 1 40 40 7 1
+text1 CODE 0 5F 5F 7 2
+text2 CODE 0 14 14 2B 2
+maintext CODE 0 3F 3F 20 2
+cstackBANK0 BANK0 1 40 40 6 1
 intentry CODE 0 4 4 A 2
-bssBANK0 BANK0 1 47 47 3 1
+bssBANK0 BANK0 1 46 46 3 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 4A-7D 1
-BANK0 4A-7D 1
+RAM 49-7D 1
+BANK0 49-7D 1
 CONST 1-3 2
-CONST 6A-FF 2
+CONST 66-FF 2
 ENTRY 1-3 2
-ENTRY 6A-FF 2
+ENTRY 66-FF 2
 IDLOC 2000-2003 2
-STACK 4A-7D 1
+STACK 49-7D 1
 CODE 1-3 2
-CODE 6A-FF 2
+CODE 66-FF 2
 SFR0 0-3F 1
 STRCODE 1-3 2
-STRCODE 6A-FF 2
+STRCODE 66-FF 2
 STRING 1-3 2
-STRING 6A-FF 2
+STRING 66-FF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -58,55 +58,53 @@ STRING 6A-FF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-F cinit CODE >655:C:\Users\Haz\AppData\Local\Temp\s8to.
-F cinit CODE >658:C:\Users\Haz\AppData\Local\Temp\s8to.
-F cinit CODE >675:C:\Users\Haz\AppData\Local\Temp\s8to.
-10 cinit CODE >676:C:\Users\Haz\AppData\Local\Temp\s8to.
-11 cinit CODE >677:C:\Users\Haz\AppData\Local\Temp\s8to.
-12 cinit CODE >683:C:\Users\Haz\AppData\Local\Temp\s8to.
-12 cinit CODE >685:C:\Users\Haz\AppData\Local\Temp\s8to.
-13 cinit CODE >686:C:\Users\Haz\AppData\Local\Temp\s8to.
-4 intentry CODE >28:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-14 text2 CODE >28:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-14 text2 CODE >29:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-16 text2 CODE >30:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-17 text2 CODE >32:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-18 text2 CODE >34:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-1C text2 CODE >35:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-29 text2 CODE >36:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-2E text2 CODE >38:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-30 text2 CODE >39:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-34 text2 CODE >42:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-35 text2 CODE >44:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-63 text1 CODE >23:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-64 text1 CODE >24:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-65 text1 CODE >25:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-40 maintext CODE >46:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-40 maintext CODE >48:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-41 maintext CODE >50:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-42 maintext CODE >51:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-44 maintext CODE >54:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-45 maintext CODE >55:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-46 maintext CODE >56:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-47 maintext CODE >59:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-49 maintext CODE >60:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-4A maintext CODE >61:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-4B maintext CODE >62:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-4D maintext CODE >63:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-4E maintext CODE >64:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-4F maintext CODE >65:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-50 maintext CODE >66:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-52 maintext CODE >67:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-54 maintext CODE >69:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-56 maintext CODE >70:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-57 maintext CODE >71:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-59 maintext CODE >73:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-5A maintext CODE >77:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-5B maintext CODE >78:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-5D maintext CODE >79:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-5E maintext CODE >80:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-60 maintext CODE >81:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
-62 maintext CODE >75:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+F cinit CODE >655:C:\Users\Haz\AppData\Local\Temp\s9bk.
+F cinit CODE >658:C:\Users\Haz\AppData\Local\Temp\s9bk.
+F cinit CODE >675:C:\Users\Haz\AppData\Local\Temp\s9bk.
+10 cinit CODE >676:C:\Users\Haz\AppData\Local\Temp\s9bk.
+11 cinit CODE >677:C:\Users\Haz\AppData\Local\Temp\s9bk.
+12 cinit CODE >683:C:\Users\Haz\AppData\Local\Temp\s9bk.
+12 cinit CODE >685:C:\Users\Haz\AppData\Local\Temp\s9bk.
+13 cinit CODE >686:C:\Users\Haz\AppData\Local\Temp\s9bk.
+4 intentry CODE >30:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+14 text2 CODE >30:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+14 text2 CODE >32:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+16 text2 CODE >33:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+17 text2 CODE >36:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+1B text2 CODE >43:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+28 text2 CODE >44:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+2D text2 CODE >47:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+2F text2 CODE >50:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+33 text2 CODE >53:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+34 text2 CODE >55:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+5F text1 CODE >24:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+60 text1 CODE >25:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+61 text1 CODE >26:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+3F maintext CODE >57:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+3F maintext CODE >60:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+40 maintext CODE >61:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+42 maintext CODE >64:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+43 maintext CODE >65:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+44 maintext CODE >66:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+45 maintext CODE >69:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+47 maintext CODE >70:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+48 maintext CODE >71:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+49 maintext CODE >72:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+4B maintext CODE >73:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+4C maintext CODE >74:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+4D maintext CODE >75:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+4E maintext CODE >76:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+50 maintext CODE >77:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+52 maintext CODE >80:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+54 maintext CODE >81:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+55 maintext CODE >84:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+56 maintext CODE >86:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+56 maintext CODE >89:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+57 maintext CODE >90:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+59 maintext CODE >93:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+5A maintext CODE >94:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+5C maintext CODE >95:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
+5E maintext CODE >86:C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -121,7 +119,7 @@ F cinit CODE >675:C:\Users\Haz\AppData\Local\Temp\s8to.
 %SYMTAB
 ___latbits 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Hspace_0 2008 0 ABS 0 - -
-__Hspace_1 4A 0 ABS 0 - -
+__Hspace_1 49 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 _PWM1CON 16 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
@@ -135,12 +133,12 @@ ltemp1 82 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 ltemp2 86 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 ltemp3 80 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Haz\AppData\Local\Temp\s8to.obj
-_main 80 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-_tick 49 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\Haz\AppData\Local\Temp\s9bk.obj
+_main 7E 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_tick 48 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 btemp 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 ltemp 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-start 1C 0 CODE 0 init C:\Users\Haz\AppData\Local\Temp\s8to.obj
+start 1C 0 CODE 0 init C:\Users\Haz\AppData\Local\Temp\s9bk.obj
 ttemp 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 wtemp 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
@@ -150,12 +148,12 @@ ttemp1 81 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 ttemp2 84 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 ttemp3 87 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
-intlevel1 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
-intlevel2 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
-intlevel3 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
-intlevel4 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
-intlevel5 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
+intlevel0 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s9bk.obj
+intlevel1 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s9bk.obj
+intlevel2 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s9bk.obj
+intlevel3 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s9bk.obj
+intlevel4 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s9bk.obj
+intlevel5 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s9bk.obj
 _OSCCONbits 10 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 wtemp1 80 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
@@ -166,13 +164,13 @@ wtemp5 88 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 wtemp6 7F 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-_dutyCycle 48 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_dutyCycle 47 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_delay 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 start_initialization 1E 0 CODE 0 cinit dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 _TRISAbits 6 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __pcstackBANK0 40 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\Haz\AppData\Local\Temp\s8to.obj
+___int_sp 0 0 STACK 2 stack C:\Users\Haz\AppData\Local\Temp\s9bk.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hcinit 28 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
@@ -201,29 +199,28 @@ __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _PR2 12 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __S0 2008 0 ABS 0 - -
-__S1 4A 0 ABS 0 - -
+__S1 49 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 _isr 28 0 CODE 0 text2 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 saved_w 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-__end_of_isr 80 0 CODE 0 text2 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__end_of_isr 7E 0 CODE 0 text2 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Haz\AppData\Local\Temp\s8to.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Haz\AppData\Local\Temp\s9bk.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits D 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-__pmaintext 80 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__pmaintext 7E 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __CFG_BORV$LO 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-stackhi 0 0 ABS 0 - C:\Users\Haz\AppData\Local\Temp\s8to.obj
-stacklo 0 0 ABS 0 - C:\Users\Haz\AppData\Local\Temp\s8to.obj
+stackhi 0 0 ABS 0 - C:\Users\Haz\AppData\Local\Temp\s9bk.obj
+stacklo 0 0 ABS 0 - C:\Users\Haz\AppData\Local\Temp\s9bk.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-main@pv 46 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Lend_init 1C 0 CODE 0 end_init -
@@ -234,7 +231,7 @@ __Hintentry 1C 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 2 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 C6 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__ptext1 BE 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __ptext2 28 0 CODE 0 text2 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
@@ -244,23 +241,23 @@ __Lfunctab 0 0 CODE 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main C6 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__end_of_main BE 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 _ADCON 1F 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 _ADRES 1E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-__end_of_delay D4 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__end_of_delay CC 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 _T2CON 13 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_aConv 47 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_aConv 46 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 interrupt_function 8 0 CODE 0 intentry dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-_delay C6 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_delay BE 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 _ADCONbits 1F 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __CFG_LPBOR$ON 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __pintentry 8 0 CODE 0 intentry dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __size_of_isr 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __initialization 1E 0 CODE 0 cinit dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-__pbssBANK0 47 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__pbssBANK0 46 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -287,7 +284,7 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackBANK0 1 40 40 A 1
-intentry 0 4 8 66 2
+cstackBANK0 1 40 40 9 1
+intentry 0 4 8 62 2
 reset_vec 0 0 0 1 2
 config 0 2007 400E 1 2

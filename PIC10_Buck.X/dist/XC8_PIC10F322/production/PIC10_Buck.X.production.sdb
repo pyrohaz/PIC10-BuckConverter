@@ -7,11 +7,11 @@
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"23 C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+"24 C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
 [v _delay delay `(v  1 e 1 0 ]
-"28
+"30
 [v _isr isr `II(v  1 e 1 0 ]
-"46
+"57
 [v _main main `(v  1 e 1 0 ]
 [s S152 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
@@ -90,13 +90,13 @@
 [v _ADRES ADRES `VEuc  1 e 1 @30 ]
 "1246
 [v _ADCON ADCON `VEuc  1 e 1 @31 ]
-[s S38 . 1 `uc 1 ADON 1 0 :1:0 
+[s S40 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :3:2 
 `uc 1 ADCS 1 0 :3:5 
 ]
 "1268
-[s S43 . 1 `uc 1 . 1 0 :2:0 
+[s S45 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
@@ -104,30 +104,28 @@
 `uc 1 ADCS1 1 0 :1:6 
 `uc 1 ADCS2 1 0 :1:7 
 ]
-[u S51 . 1 `S38 1 . 1 0 `S43 1 . 1 0 ]
-[v _ADCONbits ADCONbits `VES51  1 e 1 @31 ]
-"20 C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+[u S53 . 1 `S40 1 . 1 0 `S45 1 . 1 0 ]
+[v _ADCONbits ADCONbits `VES53  1 e 1 @31 ]
+"20 C:\Users\Haz\Documents\PIC Projects\PIC10-BuckConverter\PIC10_Buck.X\main.c
 [v _aConv aConv `VEuc  1 e 1 0 ]
 [v _dutyCycle dutyCycle `VEuc  1 e 1 0 ]
 "21
 [v _tick tick `VEuc  1 e 1 0 ]
-"46
+"57
 [v _main main `(v  1 e 1 0 ]
 {
-"48
-[v main@pv pv `uc  1 a 1 6 ]
-"83
+"97
 } 0
-"23
+"24
 [v _delay delay `(v  1 e 1 0 ]
 {
 [v delay@d d `uc  1 a 1 wreg ]
 [v delay@d d `uc  1 a 1 wreg ]
 [v delay@d d `uc  1 a 1 5 ]
-"26
+"27
 } 0
-"28
+"30
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"44
+"55
 } 0

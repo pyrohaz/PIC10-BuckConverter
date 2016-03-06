@@ -1,15 +1,15 @@
 __CFG_WRT$OFF 0 0 ABS 0
 _PR2 12 0 ABS 0
 __S0 2008 0 ABS 0
-__S1 4A 0 ABS 0
+__S1 49 0 ABS 0
 __S2 0 0 ABS 0
 __Hintentry E 0 CODE 0
 __Lintentry 4 0 CODE 0
 __CFG_BOREN$ON 0 0 ABS 0
 __pintentry 4 0 CODE 0
 _isr 14 0 CODE 0
-_tick 49 0 BANK0 1
-_main 40 0 CODE 0
+_tick 48 0 BANK0 1
+_main 3F 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 ltemp 7E 0 ABS 0
@@ -35,7 +35,7 @@ wtemp3 84 0 ABS 0
 ttemp4 7F 0 ABS 0
 wtemp4 86 0 ABS 0
 wtemp5 88 0 ABS 0
-__end_of_delay 6A 0 CODE 0
+__end_of_delay 66 0 CODE 0
 wtemp6 7F 0 ABS 0
 interrupt_function 4 0 CODE 0
 __Hconfig 2008 0 CONFIG 0
@@ -43,8 +43,8 @@ __Lconfig 2007 0 CONFIG 0
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
 __size_of_isr 0 0 ABS 0
-_aConv 47 0 BANK0 1
-_delay 63 0 CODE 0
+_aConv 46 0 BANK0 1
+_delay 5F 0 CODE 0
 __CFG_LPBOR$ON 0 0 ABS 0
 __Hfunctab 0 0 CODE 0
 __Lfunctab 0 0 CODE 0
@@ -59,7 +59,7 @@ __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
 __Hsfr0 0 0 ABS 0
 __Lsfr0 0 0 ABS 0
-_dutyCycle 48 0 BANK0 1
+_dutyCycle 47 0 BANK0 1
 __size_of_delay 0 0 ABS 0
 delay@d 45 0 BANK0 1
 __Hcode 0 0 ABS 0
@@ -68,12 +68,11 @@ stackhi 0 0 ABS 0
 __HcstackBANK0 0 0 ABS 0
 __LcstackBANK0 0 0 ABS 0
 __pcstackBANK0 40 0 BANK0 1
-main@pv 46 0 BANK0 1
 stacklo 0 0 ABS 0
 saved_w 7E 0 ABS 0
 __Hinit E 0 CODE 0
 __Linit E 0 CODE 0
-__end_of_main 63 0 CODE 0
+__end_of_main 5F 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 __CFG_LVP$ON 0 0 ABS 0
@@ -91,7 +90,7 @@ __Lbank0 0 0 ABS 0
 ___latbits 0 0 ABS 0
 __Hpowerup 0 0 CODE 0
 __Lpowerup 0 0 CODE 0
-__ptext1 63 0 CODE 0
+__ptext1 5F 0 CODE 0
 __ptext2 14 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
@@ -102,8 +101,8 @@ __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __Hspace_0 2008 0 ABS 0
 __Lspace_0 0 0 ABS 0
-__end_of_isr 40 0 CODE 0
-__Hspace_1 4A 0 ABS 0
+__end_of_isr 3F 0 CODE 0
+__Hspace_1 49 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
@@ -115,7 +114,7 @@ __size_of_main 0 0 ABS 0
 __CFG_BORV$LO 0 0 ABS 0
 __HbssBANK0 0 0 ABS 0
 __LbssBANK0 0 0 ABS 0
-__pbssBANK0 47 0 BANK0 1
+__pbssBANK0 46 0 BANK0 1
 __CFG_PWRTE$OFF 0 0 ABS 0
 _OSCCONbits 10 0 ABS 0
 _INTCONbits B 0 ABS 0
@@ -136,19 +135,19 @@ __pcstackCOMMON 0 0 COMMON 1
 start_initialization F 0 CODE 0
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-__pmaintext 40 0 CODE 0
+__pmaintext 3F 0 CODE 0
 __CFG_MCLRE$ON 0 0 ABS 0
 __CFG_FOSC$INTOSC 0 0 ABS 0
 __initialization F 0 CODE 0
 __CFG_CP$OFF 0 0 ABS 0
 %segments
 reset_vec 0 1 CODE 0 0
-intentry 8 D3 CODE 8 0
+intentry 8 CB CODE 8 0
 config 400E 400F CONFIG 400E 0
-cstackBANK0 40 49 BANK0 40 1
+cstackBANK0 40 48 BANK0 40 1
 %locals
 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
-C:\Users\Haz\AppData\Local\Temp\s8to.
+C:\Users\Haz\AppData\Local\Temp\s9bk.
 655 F 0 CODE 0
 658 F 0 CODE 0
 675 F 0 CODE 0
@@ -158,44 +157,42 @@ C:\Users\Haz\AppData\Local\Temp\s8to.
 685 12 0 CODE 0
 686 13 0 CODE 0
 main.c
-46 40 0 CODE 0
-48 40 0 CODE 0
-50 41 0 CODE 0
-51 42 0 CODE 0
-54 44 0 CODE 0
-55 45 0 CODE 0
-56 46 0 CODE 0
-59 47 0 CODE 0
-60 49 0 CODE 0
-61 4A 0 CODE 0
-62 4B 0 CODE 0
-63 4D 0 CODE 0
-64 4E 0 CODE 0
-65 4F 0 CODE 0
-66 50 0 CODE 0
-67 52 0 CODE 0
-69 54 0 CODE 0
-70 56 0 CODE 0
-71 57 0 CODE 0
-73 59 0 CODE 0
-77 5A 0 CODE 0
-78 5B 0 CODE 0
-79 5D 0 CODE 0
-80 5E 0 CODE 0
-81 60 0 CODE 0
-75 62 0 CODE 0
-23 63 0 CODE 0
-24 64 0 CODE 0
-25 65 0 CODE 0
-28 14 0 CODE 0
-29 14 0 CODE 0
-30 16 0 CODE 0
-32 17 0 CODE 0
-34 18 0 CODE 0
-35 1C 0 CODE 0
-36 29 0 CODE 0
-38 2E 0 CODE 0
-39 30 0 CODE 0
-42 34 0 CODE 0
-44 35 0 CODE 0
-28 4 0 CODE 0
+57 3F 0 CODE 0
+60 3F 0 CODE 0
+61 40 0 CODE 0
+64 42 0 CODE 0
+65 43 0 CODE 0
+66 44 0 CODE 0
+69 45 0 CODE 0
+70 47 0 CODE 0
+71 48 0 CODE 0
+72 49 0 CODE 0
+73 4B 0 CODE 0
+74 4C 0 CODE 0
+75 4D 0 CODE 0
+76 4E 0 CODE 0
+77 50 0 CODE 0
+80 52 0 CODE 0
+81 54 0 CODE 0
+84 55 0 CODE 0
+86 56 0 CODE 0
+89 56 0 CODE 0
+90 57 0 CODE 0
+93 59 0 CODE 0
+94 5A 0 CODE 0
+95 5C 0 CODE 0
+86 5E 0 CODE 0
+24 5F 0 CODE 0
+25 60 0 CODE 0
+26 61 0 CODE 0
+30 14 0 CODE 0
+32 14 0 CODE 0
+33 16 0 CODE 0
+36 17 0 CODE 0
+43 1B 0 CODE 0
+44 28 0 CODE 0
+47 2D 0 CODE 0
+50 2F 0 CODE 0
+53 33 0 CODE 0
+55 34 0 CODE 0
+30 4 0 CODE 0

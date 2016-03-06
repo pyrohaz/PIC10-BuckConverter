@@ -1,0 +1,293 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\Haz\AppData\Local\Temp\s8to.obj
+reset_vec CODE 0 0 0 1 2
+end_init CODE 0 E E 1 2
+config CONFIG 0 2007 2007 1 2
+$dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+cinit CODE 0 F F 5 2
+text1 CODE 0 63 63 7 2
+text2 CODE 0 14 14 2C 2
+maintext CODE 0 40 40 23 2
+cstackBANK0 BANK0 1 40 40 7 1
+intentry CODE 0 4 4 A 2
+bssBANK0 BANK0 1 47 47 3 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 4A-7D 1
+BANK0 4A-7D 1
+CONST 1-3 2
+CONST 6A-FF 2
+ENTRY 1-3 2
+ENTRY 6A-FF 2
+IDLOC 2000-2003 2
+STACK 4A-7D 1
+CODE 1-3 2
+CODE 6A-FF 2
+SFR0 0-3F 1
+STRCODE 1-3 2
+STRCODE 6A-FF 2
+STRING 1-3 2
+STRING 6A-FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+F cinit CODE >655:C:\Users\Haz\AppData\Local\Temp\s8to.
+F cinit CODE >658:C:\Users\Haz\AppData\Local\Temp\s8to.
+F cinit CODE >675:C:\Users\Haz\AppData\Local\Temp\s8to.
+10 cinit CODE >676:C:\Users\Haz\AppData\Local\Temp\s8to.
+11 cinit CODE >677:C:\Users\Haz\AppData\Local\Temp\s8to.
+12 cinit CODE >683:C:\Users\Haz\AppData\Local\Temp\s8to.
+12 cinit CODE >685:C:\Users\Haz\AppData\Local\Temp\s8to.
+13 cinit CODE >686:C:\Users\Haz\AppData\Local\Temp\s8to.
+4 intentry CODE >28:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+14 text2 CODE >28:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+14 text2 CODE >29:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+16 text2 CODE >30:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+17 text2 CODE >32:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+18 text2 CODE >34:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+1C text2 CODE >35:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+29 text2 CODE >36:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+2E text2 CODE >38:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+30 text2 CODE >39:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+34 text2 CODE >42:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+35 text2 CODE >44:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+63 text1 CODE >23:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+64 text1 CODE >24:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+65 text1 CODE >25:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+40 maintext CODE >46:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+40 maintext CODE >48:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+41 maintext CODE >50:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+42 maintext CODE >51:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+44 maintext CODE >54:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+45 maintext CODE >55:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+46 maintext CODE >56:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+47 maintext CODE >59:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+49 maintext CODE >60:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+4A maintext CODE >61:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+4B maintext CODE >62:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+4D maintext CODE >63:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+4E maintext CODE >64:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+4F maintext CODE >65:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+50 maintext CODE >66:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+52 maintext CODE >67:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+54 maintext CODE >69:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+56 maintext CODE >70:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+57 maintext CODE >71:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+59 maintext CODE >73:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+5A maintext CODE >77:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+5B maintext CODE >78:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+5D maintext CODE >79:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+5E maintext CODE >80:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+60 maintext CODE >81:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+62 maintext CODE >75:C:\Users\Haz\Documents\PIC Projects\PIC10_Buck.X\main.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Hspace_0 2008 0 ABS 0 - -
+__Hspace_1 4A 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+_PWM1CON 16 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_PWM1DCH 15 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_PWM1DCL 14 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+delay@d 45 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ltemp0 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ltemp1 82 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ltemp2 86 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ltemp3 80 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack C:\Users\Haz\AppData\Local\Temp\s8to.obj
+_main 80 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_tick 49 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+btemp 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ltemp 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+start 1C 0 CODE 0 init C:\Users\Haz\AppData\Local\Temp\s8to.obj
+ttemp 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+wtemp 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+ttemp0 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ttemp1 81 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ttemp2 84 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ttemp3 87 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+ttemp4 7F 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
+intlevel1 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
+intlevel2 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
+intlevel3 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
+intlevel4 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
+intlevel5 0 0 CODE 0 functab C:\Users\Haz\AppData\Local\Temp\s8to.obj
+_OSCCONbits 10 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+wtemp1 80 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+wtemp2 82 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+wtemp3 84 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+wtemp4 86 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+wtemp5 88 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+wtemp6 7F 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+_dutyCycle 48 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+__size_of_delay 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+start_initialization 1E 0 CODE 0 cinit dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_TRISAbits 6 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__pcstackBANK0 40 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\Haz\AppData\Local\Temp\s8to.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hcinit 28 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__CFG_FOSC$INTOSC 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lcinit 1E 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+_PORTAbits 5 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_INTCONbits B 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 1C 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 1C 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_PR2 12 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__S0 2008 0 ABS 0 - -
+__S1 4A 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+_isr 28 0 CODE 0 text2 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+saved_w 7E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__end_of_isr 80 0 CODE 0 text2 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Haz\AppData\Local\Temp\s8to.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+_PIE1bits D 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__pmaintext 80 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__CFG_BORV$LO 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 400E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+stackhi 0 0 ABS 0 - C:\Users\Haz\AppData\Local\Temp\s8to.obj
+stacklo 0 0 ABS 0 - C:\Users\Haz\AppData\Local\Temp\s8to.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+main@pv 46 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR1bits C 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Lend_init 1C 0 CODE 0 end_init -
+__CFG_LVP$ON 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 24 0 CODE 0 cinit dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Hintentry 1C 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 C6 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__ptext2 28 0 CODE 0 text2 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization 24 0 CODE 0 cinit dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Hend_init 1E 0 CODE 0 end_init -
+__end_of_main C6 0 CODE 0 maintext dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_ADCON 1F 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_ADRES 1E 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__end_of_delay D4 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_T2CON 13 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_aConv 47 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+interrupt_function 8 0 CODE 0 intentry dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_delay C6 0 CODE 0 text1 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+_ADCONbits 1F 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__CFG_LPBOR$ON 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__size_of_isr 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__initialization 1E 0 CODE 0 cinit dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__pbssBANK0 47 0 BANK0 1 bssBANK0 dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/XC8_PIC10F322/production\PIC10_Buck.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cstackBANK0 1 40 40 A 1
+intentry 0 4 8 66 2
+reset_vec 0 0 0 1 2
+config 0 2007 400E 1 2
